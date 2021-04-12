@@ -1,0 +1,246 @@
+<!-- Project 2 Created by Nin Pasker -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link type="image/png" href="./assets/badge.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Code snippet for javascript to open & close on-click for mobile menu -->
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+    <title>Fitworks</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+        <nav>
+            <!-- Fitworks (Logo in font) -->
+            <p class="fitworks">Fitworks</p>
+            <ul>
+                <!-- Anchor for mobile-menu -->
+                <div class="anchor">
+                    <li class="mobile-menu" onclick="openNav()">Menu</li>
+                    <!-- Overlay for Mobile Navigation -->
+                    <div id="myNav" class="overlay">
+                        <!-- w3schools code snippet for closing the overlay mobile-menu -->
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <!-- Menu nav items & Overlay content -->
+                            <div class="overlay-content">
+                                <li><a href="#about" onclick="closeNav()">About</a></li>
+                                <li><a href="#philosophy" onclick="closeNav()">Philosophy</a></li>
+                                <li><a href="#classes" onclick="closeNav()">Classes</a></li>
+                                <li><a href="#join-us" onclick="closeNav()">Join Us</a></li>
+                            </div>
+                    </div>
+                </div>
+            </ul>
+
+        </nav>
+    
+    <header>
+
+        <h1 class="animate__animated animate__lightSpeedInLeft">Everything Fitness Space</h1>
+        <!-- Man with weighted ball image -->
+        <div class="first-img">
+            <img src="assets/header.jpg" alt="Man holding weighted ball doing excercises." class="shorter">
+            
+            <!-- Fitworks Logo (Badge) -->
+            <img src="assets/badge.png" alt="Fitworks Logo" class="logo-header">
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- First Section (Our Space) -->
+        <section class="first">
+
+            <div class="our-space">
+                <!-- Our Space -->
+                <h2 id="about">Our Space</h2>
+                <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms. Energy healing pendulum meditate divination practitioner candles chanting massage Buddha. Diving Light Worker herbalist, lavender love compassion practitioner pendulum massage fibonacci sage. Dance peace angels awakening. Love Flower of Life tarot shamantic.</p>
+                <button><a href="#join-us">Let's Chat</a></button>
+            </div>
+
+            <div class="our-space-imgs">
+                <!-- Images for our space -->
+                <ul>
+                    <li>
+                        <img src="assets/image1.jpg" alt="Two females doing lunges with weights." class="smaller">
+                        <h4>15,000+ Happy Users</h4>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Second Section (Exercises) -->
+        <section class="second">
+
+            <!-- Exercises -->
+            <h2 id="philosophy">Exercises</h2>
+            <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms.</p>
+
+            <!-- Images for exercises -->
+            <ul>
+                <li class="card half running" id="running">
+                    <img src="./assets/image2.jpg" alt="Male doing high knee raises while running.">
+                    <div class="overlay-desc">
+                        <h3>Running</h3>
+                    </div>
+                </li>
+                <li class="card half yoga" id="yoga">
+                    <img src="./assets/image3.jpg" alt="Female wearing white yoga gear doing yoga stretch.">
+                    <div class="overlay-desc">
+                        <h3>Yoga</h3>
+                    </div>
+                </li>
+                <li class="card one-third boxing">
+                    <img src="./assets/image4.jpg" alt="Female in black boxing gear practicing her boxing form.">
+                    <div class="overlay-desc">
+                        <h3>Boxing</h3>
+                    </div>
+                </li>
+                <li class="card one-third cross-fit" id="cross-fit">
+                    <img src="./assets/image5.jpg" alt="Female in gym gear doing weighted bar lunges.">
+                    <div class="overlay-desc">
+                        <h3>CrossFit</h3>
+                    </div>
+                </li>
+                <li class="card one-third strength">
+                    <img src="./assets/image6.jpg" alt="Females in black training gear doing stretches.">
+                    <div class="overlay-desc">
+                        <h3>Strength</h3>
+                    </div>
+                </li>
+            </ul>
+        </section>
+<!-- End of wrapper -->
+</div>
+        <!-- Third Section (Join us Today) -->
+        <section class="third">
+            
+        <div class="wrapper">
+            <!-- Join Us Today -->
+            <h2 id="join-us">Join Us Today</h2>
+            <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms.</p>
+
+            <form action="#" method="#" class="myForm" name="myForm">
+                <ul class="myForm">
+                    <li class="one-fourth">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Please enter your name here">
+                    </li>
+                    <li class="three-quarters">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="Please enter your e-mail here">
+                    </li>
+                    <li class="full">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Be sure to tell us why you're joining!"></textarea>
+                    </li>
+                </ul>
+
+                <button class="send-message"><a href="#">Send Message</a></button>
+            </form>
+
+        </div>
+        </section>
+
+        <!-- Fourth Section (Happy Members) -->
+    <div class="wrapper">
+        <section class="fourth">
+
+            <!-- Happy Members -->
+            <h2>Happy Members</h2>
+
+                <section class="members-section">
+                
+                    <p class="testimony">
+                        <span class="uppercase">Fitworks</span> studio transformed my philosophy on health and fitness, they truly changed my lifestyle for the best.
+                    </p>
+
+                    <div class="member-pic">
+                        <img src="./assets/image10.jpg" alt="Headshot of happy memeber">
+
+                        <div class="member-info">
+                            <p>Jaime Jorge</p>
+                            <p class="founder">Founder, <span class="uppercase">rentea</span></p>
+                        </div>
+
+                        <img src="./assets/arrow.svg" class="arrow">
+
+                    </div>
+
+                </section>
+
+                <div class="ropes">
+                    <img src="./assets/image8.jpg" alt="Man using ropes to work out">
+                </div>
+        </section>
+
+
+    </div>
+</main>
+<!-- Footer -->
+<div class="wrapper">
+    <footer>
+        <div class="flex-container">
+            <div class="contact-info">
+            <!-- Fitworks Badge (Big W) -->
+                <img src="assets/badge.png" alt="Fitworks Logo" class="logo-footer">
+                <p>129 Jordan Ave,<br> Toronto, CA M22 324</p>
+                <p class="contact-email">info@spaces-studio.com</p>
+            </div>
+
+            <div class="footer-nav">
+                <ul>
+                    <div class="menu-items">
+                        <p>Menu</p>
+                        <div class="list-items">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#philosophy">Philosophy</a></li>
+                            <li><a href="#join-us">Join Us</a></li>
+                        </div>
+                    </div>
+
+                    <div class="menu-items">
+                        <p id="classes">Classes</p>
+                        <div class="list-items">
+                            <li><a href="#yoga">Yoga</a></li>
+                            <li><a href="#running">Running</a></li>
+                            <li><a href="#cross-fit">CrossFit</a></li>
+                        </div>
+                    </div>
+
+                    <div class="menu-items">
+                        <p>Follow</p>
+                        <div class="list-items">
+                            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                            <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+                            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        </div>
+                    </div>  
+                </ul>
+            </div>
+        </div>
+        <p class="footer-p">Created at <span><a href="https://junocollege.com" target="_blank">Juno College of Technology</a></span> by Nin Pasker</p> 
+        
+    </footer>
+</div>
+</body>
+</html>

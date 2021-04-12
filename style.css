@@ -1,0 +1,799 @@
+/* CSS Setup */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: ''; 
+    clear: both; 
+    height: 0; }
+
+html { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, 
+*:before, 
+*:after { 
+    box-sizing: inherit
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* Debugging */
+
+/* * {
+    border: 2px solid yellow;
+} */
+
+/****************************** General Styling ***************************************
+***************************************************************************************/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #08022D;
+    color: white;
+}
+
+.fitworks {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    transition: 0.3s;
+    display: block;
+    padding: 0 15px 15px;
+}
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav p {
+    width: 25%;
+}
+
+nav ul {
+    width: 75%;
+    font-weight: 600;
+}
+
+nav li a:hover, 
+nav li a:focus {
+    color: #3D20EF;
+}
+
+.wrapper {
+    margin: 30px 100px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 7rem;
+    text-align: center;
+    margin: 150px 0;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3.8rem;
+    margin: 0;
+}
+
+section p {
+    font-size: 1.8rem;
+    padding-right: 100px;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+section h2 {
+    position: relative;
+    padding-left: 50px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+section h2::before {
+    content: '';
+    background-image: url(./assets/slashes.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #3D20EF;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: ease-in 200ms;
+}
+
+button:active {
+    background-color: #26168f;
+    border-radius: 40px;
+}
+
+button a {
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 600;
+}
+
+.second h2,
+.third h2,
+.fourth h2 {
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.second p,
+.third p,
+.fourth p {
+    max-width: 50%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.mobile-menu,
+.closebtn {
+    display: none;
+}
+
+/*********************************** Nav & Header Styling ***********************************************
+*********************************************************************************************************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul .overlay-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-left: 50px;
+    list-style-type: none;
+}
+
+.first-img {
+    position: relative;
+}
+
+.logo-header {
+    position: absolute;
+    top: -30px;
+    left: 47%;
+    max-width: 70px;
+}
+
+.shorter {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/****************************************** First Section Styling (Our Space) *********************************
+***************************************************************************************************************/
+
+.first {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-space,
+.our-space-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+    width: calc(100% / 2);
+}
+
+.our-space {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.our-space-imgs {
+    justify-content: flex-end;
+}
+
+
+.our-space-imgs li {
+    position: relative;
+    list-style-type: none;
+}
+
+.smaller {
+    object-fit: cover;
+    height: 65vh;
+    max-width: 55vh;
+}
+
+.our-space-imgs h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #3D20EF;
+    margin: 0;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4rem;
+    position: absolute;
+    top: 200px;
+    left: -125px;
+}
+
+/************************************ Second Section Styling (Exercises) ************************************
+*************************************************************************************************************/
+
+.second img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.second ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+li.half {
+    width: calc((100% / 2) - 5px);
+    margin-bottom: 10px;
+}
+
+li.one-third {
+    width: calc(100% / 3);
+    margin-top: 10px;
+}
+
+.running {
+    margin-right: 5px;
+}
+
+.yoga {
+    margin-left: 5px;
+}
+
+.cross-fit {
+    margin: 0 10px;
+}
+
+.one-third.cross-fit {
+    width: calc((100% / 3) - 20px);
+}
+
+.card {
+    position: relative;
+    border-bottom: 5px solid #FFD600;
+}
+
+.overlay-desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 31%);
+    display: flex;
+    align-items: flex-end;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+/*********************************** Third Section Styling (Join us Today)  ********************************
+************************************************************************************************************/
+
+section.third {
+    background-image: url(./assets/image7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.third h2 {
+    padding-top: 60px;
+}
+
+label,
+input {
+    font-size: 1.8rem;
+    display: block;
+    width: 100%;
+    line-height: 35px;
+}
+
+form {
+    margin-right: 400px;
+    height: 90vh;
+}
+
+input {
+    height: 7vh;
+    border: none;
+    background-color: #D4D2E0;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #3D20EF;
+    letter-spacing: 2px;
+}  
+
+textarea {
+    border: none;
+    font-size: 1.8rem;
+    background-color: #D4D2E0;
+    resize: none;
+}
+
+ul.myForm {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+textarea,
+.full {
+    width: 100%;
+    height: 40vh;
+}
+
+.one-fourth {
+    min-width: calc(40% - 10px);
+    margin-right: 10px;
+}
+
+.three-quarters {
+    min-width: 60%;
+}
+
+button.send-message {
+    margin-top: 70px;
+}
+
+/************************************* Fourth Section Styling (Happy Members) ********************************
+**************************************************************************************************************/
+
+.members-section {
+    border-left: 5px solid #FFD600;
+    padding-left: 60px;
+    max-width: 65%;
+}
+
+.members-section p {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.members-section img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.testimony {
+    font-size: 3rem;
+    line-height: 40px;
+}
+
+.member-pic {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px 0;
+}
+
+.member-pic .arrow {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
+
+.founder {
+    font-size: 1.3rem;
+}
+
+.ropes img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/********************************************** Footer Styling ************************************************
+***************************************************************************************************************/
+
+.logo-footer {
+    max-width: 70px;
+    margin-bottom: 30px;
+}
+
+footer {
+    font-size: 2rem;
+}
+
+.contact-info {
+    line-height: 30px;
+}
+
+.contact-email {
+    line-height: 60px;
+}
+
+.footer-nav ul p {
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.footer-nav ul {
+    display: flex;
+}
+
+.footer-nav .menu-items {
+    margin: 0 50px;
+}
+
+.menu-items li {
+    line-height: 40px;
+}
+
+.footer-p {
+    margin-top: 80px;
+    border-top: 2px solid #9E9DA6;
+    color: #9E9DA6;
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+span a {
+    padding: 0;
+    font-size: 1.5rem;
+    display: inline-block;
+    color: #9E9DA6;
+}
+
+a:hover, 
+a:focus {
+    color: #FFD600;
+}
+
+.menu-items a {
+    font-size: 2rem;
+    padding: 0;
+}
+
+/********************************************* Media Query at 1125px ******************************************
+***************************************************************************************************************/
+
+@media (max-width: 1125px) {
+
+    nav li {
+        margin-left: 25px;
+    }
+
+    .footer-nav .menu-items {
+        margin: 0 20px;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    .second p,
+    .third p {
+        max-width: 75%;
+    }
+
+    .our-space,
+    .our-space-imgs {
+        width: 100%;
+    }
+
+    .our-space-imgs {
+        margin: 0 0 90px 0;
+        justify-content: center;
+    }
+}
+
+/********************************************** Media Query at 885px *****************************************
+**************************************************************************************************************/
+
+@media (max-width: 885px) {
+    .anchor {
+        position: relative;
+    }
+
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(62, 51, 211, 0.973);
+        overflow-y: hidden;
+        transition: 0.5s;
+      }
+
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .overlay a {
+        padding: 8px;
+        font-size: 36px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .overlay a:hover, 
+      .overlay a:focus {
+        color: black;
+      }
+
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        display: block;
+      }
+
+    .mobile-menu {
+        display: block;
+        font-size: 1.8rem;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        padding: 10px 0;
+        position: fixed;
+        z-index: 1;
+        top: 15px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    nav ul .overlay-content {
+        display: block;
+    }
+
+    .logo-header {
+        top: -25px;
+        left: 45%;
+        max-width: 50px;
+    }
+
+    .our-space-imgs {
+        justify-content: flex-end;
+    }
+
+    .smaller {
+        height: 327px;
+        max-width: 261px;
+    }
+    
+    .our-space-imgs h4 {
+        height: 300px;
+        width: 250px;
+        line-height: 80px;
+        font-weight: 600;
+        font-size: 4rem;
+        top: 160px;
+        left: -145px;
+    }
+
+    .one-third.cross-fit {
+        width: 100%;
+    }
+
+    li.one-third,
+    li.half {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .second p,
+    .third p,
+    .our-space p {
+        width: 100%;
+        padding: 0;
+    }
+
+    .one-fourth,
+    .three-quarters,
+    .members-section {
+        min-width: 100%;
+    }
+
+    .member-pic {
+        padding-bottom: 20px;
+    }
+
+    .flex-container {
+        display: block;
+    }
+
+    .footer-nav {
+        border-top: 2px solid #9E9DA6;
+        margin-top: 20px;
+    }
+
+    p.footer-p,
+    .footer-nav ul p,
+    .footer-nav .menu-items {
+        margin: 0;
+    }
+
+    .footer-nav ul {
+        display: block;
+    }
+
+    .menu-items li {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .menu-items .list-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-nav .menu-items {
+        margin: 50px 0;
+    }
+}
+
+/************************************************* Last Media Query at 600px **********************************
+***************************************************************************************************************/
+
+@media (max-width: 600px) {
+    .wrapper {
+        margin: 10px;
+    }
+
+    .fitworks {
+        font-size: 2.5rem;
+    }
+
+    .second p,
+    .third p,
+    .fourth p {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        margin: 100px 0;
+    }
+
+    h2 {
+        font-size: 3.8rem;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .smaller {
+        height: 261px;
+        max-width: 196px;
+    }
+    
+    .our-space-imgs h4 {
+        height: 250px;
+        width: 200px;
+        line-height: 60px;
+        font-weight: 600;
+        font-size: 4rem;
+        top: 130px;
+        left: -130px;
+    }
+
+    .our-space {
+        margin: 50px 0;
+    }
+
+    .second h2,
+    .third h2,
+    .fourth h2 {
+        margin-top: 60px;
+    }
+
+    .third h2 {
+        padding-top: 40px;
+    }
+
+    .members-section {
+        padding-left: 20px;
+    }
+
+    .member-pic {
+        margin-top: 40px;
+    }
+
+    .our-space-imgs h4 {
+        left: -72px;
+        top: 100px;
+    }
+    
+    .logo-footer {
+        max-width: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-nav .menu-items {
+        margin: 20px 0;
+    }
+    
+    .menu-items li {
+        margin-top: 4px;
+    }
+    
+    .footer-p {
+        padding: 20px;
+        line-height: 20px; 
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+
+}
